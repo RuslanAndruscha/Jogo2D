@@ -1,0 +1,7 @@
+.vscode/
+include/
+lib/
+freeglut.dll
+launch.json
+main.exe
+tasks.json
