@@ -11,7 +11,7 @@ float const LOGICAL_WIDTH = 900.0f;
 float const LOGICAL_HEIGHT = 720.0f;
 float frame = 1000.0f/60.0f;
 float velQueda = 10.0f; //5 posições para cada frame
-int tempoSpawObjetos = 1000; //tempo em milisegundos
+int tempoSpawObjetos = 800; //tempo em milisegundos
 
 float tempoTremor = 0.0f;
 float magnitudeTremor = 5.0f;
@@ -103,7 +103,7 @@ void Inicializar(){
   player.x = player.x = (LOGICAL_WIDTH / 2) - 50;
   player.y = 10;
   player.altura = 25;
-  player.largura = 100;
+  player.largura = 150;
   player.cor[0] = 0.0f;
   player.cor[1] = 0.0f;
   player.cor[2] = 1.0f;
@@ -235,7 +235,7 @@ void Anima(int value){
       pontuacao++;
       vetorObjetos.erase(vetorObjetos.begin() + i);
       i--;
-      if(pontuacao % 20 == 0 && pontuacao) {
+      if(pontuacao % 20 == 0 && pontuacao && pontuacao <= 220) {
         velQueda += 2;
         playerSpeed += 2;
       }
